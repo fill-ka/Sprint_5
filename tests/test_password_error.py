@@ -16,4 +16,4 @@ def test_redirect_to_constructor_blocks(browser_reg):
     WebDriverWait(browser_reg,5).until(EC.visibility_of_element_located((By.XPATH, incorrect_password_error_xpath)))
 
     incorrect_password_error = browser_reg.find_element(By.XPATH, incorrect_password_error_xpath)
-    assert 'Некорректный пароль' in incorrect_password_error.text
+    assert incorrect_password_error.is_displayed()

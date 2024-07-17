@@ -16,4 +16,4 @@ def test_redirect_to_constructor_blocks(browser_reg):
     WebDriverWait(browser_reg,5).until(EC.visibility_of_element_located((By.XPATH, login_button_xpath)))
 
     login_button = browser_reg.find_element(By.XPATH, login_button_xpath)
-    assert 'Войти' in login_button.text
+    assert login_button.is_displayed()

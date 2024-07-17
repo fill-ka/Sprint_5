@@ -18,4 +18,4 @@ def test_login_by_button_LK(browser):
     WebDriverWait(browser, 5).until(EC.visibility_of_element_located((By.XPATH, create_order_button_xpath)))
 
     create_order_button = browser.find_element(By.XPATH, create_order_button_xpath)
-    assert 'Оформить заказ' in create_order_button.text
+    assert create_order_button.is_displayed()

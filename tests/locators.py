@@ -21,3 +21,6 @@ registration_button_xpath = ".//button[text()='Зарегистрировать�
 incorrect_password_error_xpath = ".//p[text()='Некорректный пароль']" #Ошибка "Некорректный пароль
 login_button_registration_form = ".//a[text()='Войти']" #Кнока "Войти" в форме регистрации
 logout_button_xpath = ".//button[text()='Выход']" #Кнопка "Выйти"
+bulki_new_class_xpath = ".//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']" #Новый класс при клике на таб Булки
+nachinki_new_class_xpath = ".//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']" #Новый класс при клике на таб Начинки
+souses_new_class_xpath = ".//div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']" #Новый класс при клике на таб Соусы

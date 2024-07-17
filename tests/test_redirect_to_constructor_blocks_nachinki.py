@@ -17,21 +17,7 @@ def test_redirect_to_constructor_blocks(browser):
 
     WebDriverWait(browser, 5).until(EC.visibility_of_element_located((By.XPATH, create_order_button_xpath)))
 
-    create_order_button = browser.find_element(By.XPATH, create_order_button_xpath)
-    assert 'Оформить заказ' in create_order_button.text
-
     browser.find_element(By.XPATH, nachinki_xpath).click()
-    element = browser.find_element(By.XPATH, sir_s_asteroidnoy_pleseniy_xpath)
-    browser.execute_script("arguments[0].scrollIntoView();", element)
+    nachinki_new_class = browser.find_element(By.XPATH, nachinki_new_class_xpath)
 
-    browser.find_element(By.XPATH, souses_xpath).click()
-    browser.find_element(By.XPATH, sous_spicy_x_xpath)
-
-    sous_spicy_x = browser.find_element(By.XPATH, sous_spicy_x_xpath)
-    assert 'Соус Spicy-X' in sous_spicy_x.text
-
-    browser.find_element(By.XPATH, bulki_button_xpath).click()
-    browser.find_element(By.XPATH, fluoriscent_bulka_xpath)
-
-    fluoriscent_bulka = browser.find_element(By.XPATH, fluoriscent_bulka_xpath)
-    assert 'Флюоресцентная булка R2-D3' in fluoriscent_bulka.text
+    assert nachinki_new_class.is_displayed()

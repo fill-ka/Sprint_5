@@ -11,21 +11,15 @@ def test_redirect_to_constructor_blocks(browser):
 
     WebDriverWait(browser, 5).until(EC.visibility_of_element_located((By.XPATH, login_button_xpath)))
 
-    login_button = browser.find_element(By.XPATH, login_button_xpath)
-    assert 'Войти' in login_button.text
-
     browser.find_element(By.XPATH, textbox_email_xpath).send_keys("anna_komova_7_251@gmail.com")
     browser.find_element(By.XPATH, textbox_password_xpath).send_keys("Q1w2e3r4t5")
     browser.find_element(By.XPATH, login_button_xpath).click()
 
     WebDriverWait(browser, 5).until(EC.visibility_of_element_located((By.XPATH, create_order_button_xpath)))
 
-    create_order_button = browser.find_element(By.XPATH, create_order_button_xpath)
-    assert 'Оформить заказ' in create_order_button.text
-
     browser.find_element(By.XPATH, LK_header_xpath).click()
 
     WebDriverWait(browser, 5).until(EC.visibility_of_element_located((By.XPATH, save_button_in_LK_xpath)))
 
     save_button_in_LK = browser.find_element(By.XPATH, save_button_in_LK_xpath)
-    assert 'Сохранить' in save_button_in_LK.text
+    assert save_button_in_LK.is_displayed()

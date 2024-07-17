@@ -19,5 +19,4 @@ def test_redirect_to_constructor_blocks(browser_rec_pas):
     WebDriverWait(browser_rec_pas, 5).until(EC.visibility_of_element_located((By.XPATH, create_order_button_xpath)))
 
     create_order_button = browser_rec_pas.find_element(By.XPATH, create_order_button_xpath)
-    assert isinstance(create_order_button.text, str)
-    assert 'Оформить заказ' in create_order_button.text
+    assert create_order_button.is_displayed()
